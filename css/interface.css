@@ -7,9 +7,19 @@ html, body {
 div[role="main"] {
     margin-top: 1.875em;
 }
-    .covers {
+    .covers, .cover {
         text-align: center;
     }
+        .cover {
+            height: 15em;
+            width: 28.125em;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+            .cover img {
+                margin: -115px auto;
+                width: 28.125em;
+            }
 
         .covers img {
             display: inline-block;
@@ -19,8 +29,9 @@ div[role="main"] {
 
     .tagline {
         text-align: center;
-        font-size: 1.5em;
+        font-size: 2em;
         margin: 0.625em 0 2.5em 0;
+        font-family: 'EB Garamond', serif;
     }
 
     .en .tagline.top, .ar .tagline.top {
@@ -38,24 +49,9 @@ div[role="main"] {
     html, body {
         font-size:20px;
     }
-    .covers img {
-        display: block;
-        width: 25em;
-        margin-bottom: 10px;
+    .cover img {
+        margin: -135px auto;
     }
-
-    .en .tagline.top {
-        display: block;
-        margin-bottom: 0.625em;
-    }
-    .en .tagline.bottom {
-        display: none;
-    }
-
-    .ar .covers img:nth-child(2) {
-        display: none;
-    }
-
     #player {
         display: none;
     }
@@ -66,18 +62,24 @@ div[role="main"] {
     html, body {
         font-size:18px;
     }
-    .covers img {
-        width: 18.75em;
+    .cover img {
+        margin: -125px auto;
     }
 }
 
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
-    .covers img {
-        display: block;
+    .cover {
+        height: 11em;
         width: 90%;
-        height: 90%;
-        margin-bottom: 10px;
+        margin: 0 auto;
+        overflow: hidden;
     }
+        .cover img {
+            display: block;
+            width: 300px;
+            height: 300px;
+            margin: -70px 0;
+        }
 
     .en .tagline.top {
         display: block;
