@@ -1,12 +1,105 @@
 html, body {
     background-color: #000;
-    color: #ddd;
-    font: normal 16px Arial, Helvetica, sans-serif;
+    color: #999;
+    font: normal 16px 'EB Garamond', Helvetica, sans-serif;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    word-spacing: 1px;
+    line-height: 1.1em;
 }
 
-div[role="main"] {
-    margin-top: 1.875em;
+#bg-page {
+    position:fixed;
+    top:-50%;
+    left:-50%;
+    width:200%;
+    height:200%;
 }
+    #bg-page img {
+        position:absolute;
+        top:0;
+        left:0;
+        right:0;
+        bottom:0;
+        margin:auto;
+        min-width:50%;
+        min-height:50%;
+    }
+
+div[role="main"] {
+    position: relative;
+    margin-top: 1.875em;
+    z-index: 100;
+}
+    div[role="main"].content-container {
+        background: url(../img/bg_box.png);
+        padding: 15px;
+        border: solid 1px #000;
+        color: #999;
+        height: auto;
+        width: 500px;
+        font-size: 0.93em;
+        line-height: 1.25em;
+        margin: 0 auto;
+        text-align: center;
+    }
+        .content-container h1 {
+            color: #ddd;
+            font-size: 2.8em;
+            font-weight: normal;
+        }
+
+        .content-container .links {
+            width: 351px;
+            height: 32px;
+            margin: 0 auto 20px auto;
+
+        }
+        .content-container .links a {
+            float: left;
+        }
+            .content-container .links a:first-child {
+                margin-right: 15px;
+            }
+
+
+        .content-container a {
+            position: relative;
+            color: #ddd;
+            text-decoration: none;
+            background-color: rgba(219,87,5,1);
+            font-weight: 700;
+            font-size: 16px;
+            display: block;
+            padding: 4px;
+            -webkit-border-radius: 8px;
+            -moz-border-radius: 8px;
+            border-radius: 8px;
+            -webkit-box-shadow: 0px 6px 0px rgba(219,31,5,1), 0px 6px 25px rgba(0,0,0,.7);
+            -moz-box-shadow: 0px 6px 0px rgba(219,31,5,1), 0px 6px 25px rgba(0,0,0,.7);
+            box-shadow: 0px 6px 0px rgba(219,31,5,1), 0px 6px 25px rgba(0,0,0,.7);
+            margin: 0px auto;
+            width: 160px;
+            text-align: center;
+
+            -webkit-transition: all .1s ease;
+            -moz-transition: all .1s ease;
+            -ms-transition: all .1s ease;
+            -o-transition: all .1s ease;
+            transition: all .1s ease;
+        }
+
+        .content-container a:active {
+            -webkit-box-shadow: 0px 3px 0px rgba(219,31,5,1), 0px 3px 6px rgba(0,0,0,.9);
+            -moz-box-shadow: 0px 3px 0px rgba(219,31,5,1), 0px 3px 6px rgba(0,0,0,.9);
+            box-shadow: 0px 3px 0px rgba(219,31,5,1), 0px 3px 6px rgba(0,0,0,.9);
+            position: relative;
+            top: 3px;
+        }
+
     .covers, .cover {
         text-align: center;
     }
@@ -27,16 +120,59 @@ div[role="main"] {
             margin: 0 auto;
         }
 
-    .tagline {
-        text-align: center;
-        font-size: 2em;
-        margin: 0.625em 0 2.5em 0;
-        font-family: 'EB Garamond', serif;
+div[role="footer"] {
+    position: fixed;
+    z-index: 100;
+    left: 0px;
+    bottom: 0px;
+    width: 100%;
+    height: 75px;
+    background: url(../img/bg_box.png);
+    border-top: solid 1px #000;
+}
+    div[role="footer"] .title {
+        position: absolute;
+        top: 30px;
+        left: 30px;
     }
+    div[role="footer"] .social {
+        position: absolute;
+        top: 15px;
+        left: 300px;
+    }
+        .social div {
+            width: 48px;
+            height: 48px;
+            float: left;
+        }
+            .social div:first-child {
+                margin-right: 10px;
+            }
+        .social .twitter {
+            background-image: url(../img/twitter.png);
+        }
+        .social .facebook {
+            background-image: url(../img/facebook.png);
+        }
 
-    .en .tagline.top, .ar .tagline.top {
-        display: none;
+    div[role="footer"] .links {
+        position: absolute;
+        top: 30px;
+        right: 30px;
     }
+        div[role="footer"] .links a {
+            color: #999;
+            text-decoration: none;
+            padding-left: 5px;
+            border-left: solid 1px transparent;
+        }
+        div[role="footer"] .links a:first-child {
+            margin-right: 20px;
+        }
+        div[role="footer"] .links a:hover {
+            border-left: solid 1px #ddd;
+            color: #ddd;
+        }
 
 #player {
     position: absolute;
