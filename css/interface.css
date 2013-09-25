@@ -36,26 +36,26 @@ div[role="main"] {
     z-index: 100;
 }
     div[role="main"].content-container {
+        position: absolute;
+        bottom: 75px;
+        right: 15px;
         background: url(../img/bg_box.png);
         padding: 15px;
-        border: solid 1px #000;
         color: #999;
         height: auto;
-        width: 500px;
+        width: 425px;
         font-size: 0.93em;
         line-height: 1.25em;
-        margin: 0 auto;
         text-align: center;
     }
         .content-container h1 {
             color: #ddd;
             font-size: 2.8em;
-            font-family: 'EB Garamond';
             font-weight: normal;
         }
 
         .content-container .links {
-            width: 351px;
+            width: 311px;
             height: 32px;
             margin: 0 auto 20px auto;
 
@@ -70,22 +70,23 @@ div[role="main"] {
 
         .content-container a {
             position: relative;
-            color: #ddd;
+            color: #222;
             text-decoration: none;
             /*background-color: rgba(219,87,5,1);*/
-            background-color: #694215;
+            background-color: #aaaaaa;
             font-weight: 400;
             font-size: 14px;
             display: block;
-            padding: 4px;
             -webkit-border-radius: 8px;
             -moz-border-radius: 8px;
             border-radius: 8px;
-            -webkit-box-shadow: 0px 6px 0px #572001, 0px 6px 25px rgba(0,0,0,.7);
-            -moz-box-shadow: 0px 6px 0px #572001, 0px 6px 25px rgba(0,0,0,.7);
-            box-shadow: 0px 6px 0px #572001, 0px 6px 25px rgba(0,0,0,.7);
+            border-bottom: solid 1px #ddd;
+            -webkit-box-shadow: 0px 6px 0px #333, 0px 6px 25px rgba(0,0,0,.7);
+            -moz-box-shadow: 0px 6px 0px #333, 0px 6px 25px rgba(0,0,0,.7);
+            box-shadow: 0px 6px 0px #333, 0px 6px 25px rgba(0,0,0,.7);
+            padding: 4px;
             margin: 0px auto;
-            width: 160px;
+            width: 140px;
             text-align: center;
 
             -webkit-transition: all .1s ease;
@@ -95,12 +96,31 @@ div[role="main"] {
             transition: all .1s ease;
         }
 
+            .content-container a span {
+                position: absolute;
+                display: block;
+                background: url(../img/shine.png) -60px -80px no-repeat;
+                -webkit-border-radius: 8px;
+                -moz-border-radius: 8px;
+                border-radius: 8px;
+                transition-property: all;
+                transition-duration: .8s;
+                height: 26px;
+                width: 147px;
+                top: 0px;
+                left: 0px;
+            }
+                .content-container a:hover span {
+                    background-position: 200px 80px;
+                }
+
         .content-container a:active {
-            -webkit-box-shadow: 0px 3px 0px #572001, 0px 3px 6px rgba(0,0,0,.9);
-            -moz-box-shadow: 0px 3px 0px #572001, 0px 3px 6px rgba(0,0,0,.9);
-            box-shadow: 0px 3px 0px #572001, 0px 3px 6px rgba(0,0,0,.9);
+            -webkit-box-shadow: 0px 3px 0px #333, 0px 3px 6px rgba(0,0,0,.9);
+            -moz-box-shadow: 0px 3px 0px #333, 0px 3px 6px rgba(0,0,0,.9);
+            box-shadow: 0px 3px 0px #333, 0px 3px 6px rgba(0,0,0,.9);
             position: relative;
             top: 3px;
+            color: #ddd;
         }
 
         .cover img {
@@ -108,27 +128,6 @@ div[role="main"] {
             height: 300px;
             border: solid 1px #202020;
         }
-/*
-    .covers, .cover {
-        text-align: center;
-    }
-        .cover {
-            height: 15em;
-            width: 28.125em;
-            margin: 0 auto;
-            overflow: hidden;
-        }
-            .cover img {
-                margin: -115px auto;
-                width: 28.125em;
-            }
-
-        .covers img {
-            display: inline-block;
-            border: solid 1px #333;
-            margin: 0 auto;
-        }
-*/
 
 div[role="footer"] {
     position: fixed;
@@ -138,7 +137,6 @@ div[role="footer"] {
     width: 100%;
     height: 75px;
     background: url(../img/bg_box.png);
-    border-top: solid 1px #000;
 }
     div[role="footer"] .title {
         position: absolute;
@@ -192,13 +190,16 @@ div[role="footer"] {
             color: #999;
             text-decoration: none;
             padding-left: 5px;
-            border-left: solid 1px transparent;
+            border-bottom: solid 10px transparent;
+                transition-property: all;
+                transition-duration: .3s;
+
         }
         div[role="footer"] .links a:first-child {
             margin-right: 20px;
         }
         div[role="footer"] .links a:hover {
-            border-left: solid 1px #ddd;
+            border-bottom: solid 1px #ddd;
             color: #ddd;
         }
 
