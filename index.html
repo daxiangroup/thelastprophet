@@ -15,16 +15,14 @@
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/main.css">
         <link rel="stylesheet" href="css/interface.css">
-        <link href='http://fonts.googleapis.com/css?family=EB+Garamond' rel='stylesheet' type='text/css'>
         <link href='http://fonts.googleapis.com/css?family=Titillium+Web:400,700' rel='stylesheet' type='text/css'/ >
-        <script src="js/vendor/modernizr-2.6.2.min.js"></script>
     </head>
     <body>
         <!--[if lt IE 7]>
             <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
         <![endif]-->
         <div id="bg-page">
-            <img class="bg" src="img/background.jpg" />
+            <div class="placeholder"></div>
         </div>
 
         <div role="main" class="content-container">
@@ -40,6 +38,16 @@
             </div>
         </div>
 
+        <div id="drawer" class="">
+            <div class="social">
+                <a class="twitter" href="https://twitter.com/lastprophet" title="The Last Prophet - Twitter" target="_blank"><span></span></a>
+                <a class="facebook" href="https://www.facebook.com/the.last.prophet.book" title="The Last Prophet - Facebook" target="_blank"><span></span></a>
+            </div>
+            <div class="links">
+                <a href="http://dont-judge-a-dick-by-its-foreskin.com/the-author" target="_blank">The Author</a>
+                <a href="http://dont-judge-a-dick-by-its-foreskin.com/blog" target="_blank">Blog</a>
+            </div>
+        </div>
         <div role="footer">
             <div class="title">
                 The Last Prophet
@@ -51,6 +59,8 @@
             <div class="links">
                 <a href="http://dont-judge-a-dick-by-its-foreskin.com/the-author" target="_blank">The Author</a>
                 <a href="http://dont-judge-a-dick-by-its-foreskin.com/blog" target="_blank">Blog</a>
+            </div>
+            <div class="drawer-control" onClick="toggleClass();">
             </div>
         </div>
 
@@ -72,6 +82,12 @@
             var pageTracker = _gat._getTracker("UA-42201274-1");
             pageTracker._trackPageview();
             } catch(err) {}
+        </script>
+        <script type="text/javascript">
+            function toggleClass() {
+                var el = document.getElementById('drawer');
+                el.className = el.className == '' ? 'open' : '';
+            }
         </script>
     </body>
 </html>

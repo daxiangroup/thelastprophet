@@ -13,21 +13,20 @@ html, body {
 
 #bg-page {
     position:fixed;
-    top:-50%;
-    left:-50%;
-    width:200%;
-    height:200%;
+    top: 0px;
+    left: 0px;
+    width:100%;
+    height:100%;
 }
-    #bg-page img {
-        position:absolute;
+    #bg-page .placeholder {
+        background: url(../img/background_hi.png) top center;
         top:0;
+        bottom:0;
         left:0;
         right:0;
-        width: 1000px;
-        bottom:0;
+        width: 100%;
+        height: 100%;
         margin:auto;
-        min-width:50%;
-        min-height:50%;
     }
 
 div[role="main"] {
@@ -203,10 +202,31 @@ div[role="footer"] {
             color: #ddd;
         }
 
+    div[role="footer"] .drawer-control {
+        display: none;
+    }
+
+        div[role="footer"] .drawer-control {
+            position: absolute;
+            display: block;
+            top: 10px;
+            right: 30px;
+            width: 30px;
+            height: 25px;
+            background: url(../img/255.png);
+        }
+
 #player {
     position: absolute;
     top: -8000px;
     left: -8000px;
+}
+
+/* iPad General */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+    #bg-page .placeholder {
+        background: url(../img/background_lo.png) top center;
+    }
 }
 
 /* iPad Portait */
@@ -214,9 +234,16 @@ div[role="footer"] {
     html, body {
         font-size:20px;
     }
-    .cover img {
-        margin: -135px auto;
+    div[role="main"].content-container {
+        position: fixed;
+        bottom: 75px;
+        width: 425px;
     }
+       .cover img {
+            width: 300px;
+            height: 300px;
+        }
+
     #player {
         display: none;
     }
@@ -227,36 +254,106 @@ div[role="footer"] {
     html, body {
         font-size:18px;
     }
-    .cover img {
-        margin: -125px auto;
+
+    div[role="main"].content-container {
+        position: fixed;
+        bottom: 45px;
+        width: 375px;
+    }
+        .content-container h1 {
+            font-size: 2.0em;
+        }
+       .cover img {
+            width: 250px;
+            height: 250px;
+        }
+
+    div[role="footer"] {
+        height: 45px;
+    }
+        div[role="footer"] .title, div[role="footer"] .links {
+            top: 15px;
+        }
+}
+
+/* iPhone General */
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+    html, body {
+        background: fixed url(../img/background_lo.png) top center;
+        width: 100%;
+    }
+    #bg-page {
+        display: none;
     }
 }
 
-@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
-    .cover {
-        height: 11em;
-        width: 90%;
-        margin: 0 auto;
-        overflow: hidden;
+/* iPhone Portait */
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) and (orientation : portrait) {
+    div[role="main"].content-container {
+        position: relative;
+        top: 0px;
+        left: 5px;
+        width: 280px;
+        margin-top: 0px;
+        margin-bottom: 10px;
     }
+        .content-container h1 {
+            font-size: 1.8em;
+            margin-top: 5px;
+        }
+        .content-container .links {
+            width: 232px;
+        }
+            .content-container a {
+                width: 100px;
+            }
+
         .cover img {
-            display: block;
-            width: 300px;
-            height: 300px;
-            margin: -70px 0;
+            position: relative;
+            width: 225px;
+            height: 225px;
         }
 
-    .en .tagline.top {
-        display: block;
-        margin-bottom: 0.625em;
+    #drawer {
+        position: relative;
+        z-index: 100;
+        left: 0px;
+        width: 100%;
+        height: 0px;
+        background: url(../img/bg_box.png);
     }
-    .en .tagline.bottom {
-        display: none;
+    #drawer.open {
+        position: relative;
+        height: 100px;
     }
 
-    .ar .covers img:nth-child(2) {
-        display: none;
+    div[role="footer"] {
+        position: relative;
+        z-index: 100;
+        left: 0px;
+        width: 100%;
+        height: 75px;
+        background: url(../img/bg_box.png);
     }
+        div[role="footer"] {
+            height: 45px;
+        }
+            div[role="footer"] .title {
+                top: 15px;
+            }
+            div[role="footer"] .links, div[role="footer"] .social {
+                display: none;
+            }
+
+        div[role="footer"] .drawer-control {
+            position: absolute;
+            display: block;
+            top: 10px;
+            right: 30px;
+            width: 30px;
+            height: 25px;
+            background: url(../img/255.png);
+        }
 
     #player {
         display: none;
