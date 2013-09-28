@@ -33,22 +33,10 @@
                 <a href="download.php?lang=ar"><span></span>Arabic PDF</a>
             </div>
 
-            <div class="cover">
-                <img src="img/75dpi-450x450-Front.jpg">
-            </div>
+            <div class="cover"></div>
         </div>
 
-        <div id="drawer" class="">
-            <div class="social">
-                <a class="twitter" href="https://twitter.com/lastprophet" title="The Last Prophet - Twitter" target="_blank"><span></span></a>
-                <a class="facebook" href="https://www.facebook.com/the.last.prophet.book" title="The Last Prophet - Facebook" target="_blank"><span></span></a>
-            </div>
-            <div class="links">
-                <a href="http://dont-judge-a-dick-by-its-foreskin.com/the-author" target="_blank">The Author</a>
-                <a href="http://dont-judge-a-dick-by-its-foreskin.com/blog" target="_blank">Blog</a>
-            </div>
-        </div>
-        <div role="footer">
+        <div role="footer" id="footer">
             <div class="title">
                 The Last Prophet
             </div>
@@ -85,8 +73,14 @@
         </script>
         <script type="text/javascript">
             function toggleClass() {
-                var el = document.getElementById('drawer');
-                el.className = el.className == '' ? 'open' : '';
+                var el = document.getElementById('footer');
+                if (el.className == '') {
+                    el.className = 'open';
+                    window.scrollTo(0,8000);
+                    return;
+                }
+
+                el.className = '';
             }
         </script>
     </body>

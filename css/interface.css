@@ -122,10 +122,12 @@ div[role="main"] {
             color: #ddd;
         }
 
-        .cover img {
+        .cover {
             width: 300px;
             height: 300px;
             border: solid 1px #202020;
+            background-image: url(../img/cover_300.png);
+            margin: 0 auto;
         }
 
 div[role="footer"] {
@@ -190,9 +192,8 @@ div[role="footer"] {
             text-decoration: none;
             padding-left: 5px;
             border-bottom: solid 10px transparent;
-                transition-property: all;
-                transition-duration: .3s;
-
+            transition-property: all;
+            transition-duration: .3s;
         }
         div[role="footer"] .links a:first-child {
             margin-right: 20px;
@@ -206,16 +207,6 @@ div[role="footer"] {
         display: none;
     }
 
-        div[role="footer"] .drawer-control {
-            position: absolute;
-            display: block;
-            top: 10px;
-            right: 30px;
-            width: 30px;
-            height: 25px;
-            background: url(../img/255.png);
-        }
-
 #player {
     position: absolute;
     top: -8000px;
@@ -227,6 +218,14 @@ div[role="footer"] {
     #bg-page .placeholder {
         background: url(../img/background_lo.png) top center;
     }
+       .cover {
+            width: 300px;
+            height: 300px;
+            background-image: url(../img/cover_300.png);
+        }
+    #player {
+        display: none;
+    }    
 }
 
 /* iPad Portait */
@@ -238,14 +237,6 @@ div[role="footer"] {
         position: fixed;
         bottom: 75px;
         width: 425px;
-    }
-       .cover img {
-            width: 300px;
-            height: 300px;
-        }
-
-    #player {
-        display: none;
     }
 }
 
@@ -263,10 +254,6 @@ div[role="footer"] {
         .content-container h1 {
             font-size: 2.0em;
         }
-       .cover img {
-            width: 250px;
-            height: 250px;
-        }
 
     div[role="footer"] {
         height: 45px;
@@ -274,26 +261,37 @@ div[role="footer"] {
         div[role="footer"] .title, div[role="footer"] .links {
             top: 15px;
         }
+        div[role="footer"] .social {
+            top: 8px;
+        }
+            .social a {
+                width: 32px;
+                height: 32px;
+            }
+            .social .twitter {
+                background-image: url(../img/twitter_32.png);
+            }
+            .social .facebook {
+                background-image: url(../img/facebook_32.png);
+            }
 }
 
 /* iPhone General */
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+    * {
+        transition-property: all;
+        transition-duration: .4s;
+    }
     html, body {
-        background: fixed url(../img/background_lo.png) top center;
+        background: fixed url(../img/background_lo.png) center center;
         width: 100%;
     }
     #bg-page {
         display: none;
     }
-}
-
-/* iPhone Portait */
-@media only screen and (min-device-width : 320px) and (max-device-width : 480px) and (orientation : portrait) {
     div[role="main"].content-container {
         position: relative;
         top: 0px;
-        left: 5px;
-        width: 280px;
         margin-top: 0px;
         margin-bottom: 10px;
     }
@@ -303,59 +301,149 @@ div[role="footer"] {
         }
         .content-container .links {
             width: 232px;
+            margin: 0 auto 20px auto;
         }
-            .content-container a {
-                width: 100px;
-            }
-
-        .cover img {
+        .content-container a span {
+            display: none;
+        }
+        .cover {
             position: relative;
             width: 225px;
             height: 225px;
-        }
-
-    #drawer {
-        position: relative;
-        z-index: 100;
-        left: 0px;
-        width: 100%;
-        height: 0px;
-        background: url(../img/bg_box.png);
-    }
-    #drawer.open {
-        position: relative;
-        height: 100px;
-    }
-
+            background-image: url(../img/cover_225.png);
+        }   
     div[role="footer"] {
         position: relative;
         z-index: 100;
         left: 0px;
         width: 100%;
-        height: 75px;
         background: url(../img/bg_box.png);
+    }
+        div[role="footer"] .links, div[role="footer"] .social {
+            display: none;
+        }
+        div[role="footer"].open .links, div[role="footer"].open .social {
+            display: block;
+        }
+        div[role="footer"] .drawer-control {
+            position: absolute;
+            display: block;
+            top: 10px;
+            right: 15px;
+            width: 30px;
+            height: 25px;
+            background: url(../img/255.png);
+        }
+    #player {
+        display: none;
+    }
+}
+
+/* iPhone Portait */
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) and (orientation : portrait) {
+    div[role="main"].content-container {
+        left: 25px;
+        width: 240px;
+    }
+        .content-container h1 {
+            font-size: 1.8em;
+            margin-top: 5px;
+        }
+            .content-container a {
+                width: 100px;
+            }
+
+    div[role="footer"] {
+        height: 75px;
     }
         div[role="footer"] {
             height: 45px;
         }
             div[role="footer"] .title {
                 top: 15px;
-            }
-            div[role="footer"] .links, div[role="footer"] .social {
-                display: none;
+                left: 15px;
             }
 
-        div[role="footer"] .drawer-control {
-            position: absolute;
-            display: block;
-            top: 10px;
-            right: 30px;
-            width: 30px;
-            height: 25px;
-            background: url(../img/255.png);
+        div[role="footer"].open {
+            height: 100px;
+        }        
+            div[role="footer"].open .social {
+                top: 45px;
+                left: 10px;
+            }
+                div[role="footer"].open .social a {
+                    width: 48px;
+                    height: 48px;
+                }
+                    .social a:first-child {
+                        margin-right: 10px;
+                    }
+                    .social a span {
+                        display: none;
+                    }
+            div[role="footer"].open .links {
+                top: 60px;
+                right: 12px;
+            }
+                div[role="footer"] .links a:first-child {
+                    margin-right: 10px;
+                }
+}
+
+/* iPhone Landscape */
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) and (orientation : landscape) {
+    div[role="main"].content-container {
+        left: 25px;
+        width: 240px;
+    }
+        .content-container a {
+            width: 100px;
         }
 
-    #player {
-        display: none;
+    div[role="footer"] {
+        height: 35px;
+    }
+        div[role="footer"] .title {
+            top: 8px;
+        }
+        div[role="footer"] .title {
+            left: 15px;
+        }
+
+    div[role="footer"].open {
+        height: 85px;
+    }        
+        div[role="footer"].open .social {
+            top: 37px;
+            left: 10px;
+        }
+            .social a:first-child {
+                margin-right: 10px;
+            }
+            .social a span {
+                display: none;
+            }
+        div[role="footer"].open .links {
+            top: 52px;
+            right: 13px;
+        }
+            div[role="footer"] .links a:first-child {
+                margin-right: 10px;
+            }
+        .social a {
+            width: 32px;
+            height: 32px;
+        }
+        .social .twitter {
+            background-image: url(../img/twitter_32.png);
+        }
+        .social .facebook {
+            background-image: url(../img/facebook_32.png);
+        }
+    div[role="footer"] .drawer-control {
+        width: 22px;
+        height: 19px;
+        top: 8px;
+        background: url(../img/255_sm.png);
     }
 }
