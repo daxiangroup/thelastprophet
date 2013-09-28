@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>The Last Prophet</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+
+        <link rel="icon" type="image/gif" href="favicon.gif">
+
+        <link rel="stylesheet" href="css/all.min.css">
+        <link href='http://fonts.googleapis.com/css?family=Titillium+Web:400,700' rel='stylesheet' type='text/css'/ >
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+        <![endif]-->
+        <div id="bg-page">
+            <div class="placeholder"></div>
+        </div>
+
+        <div role="main" class="content-container">
+            <h1>Free Download</h1>
+
+            <div class="links">
+                <a href="download.php?lang=en"><span></span>English PDF</a>
+                <a href="download.php?lang=ar"><span></span>Arabic PDF</a>
+            </div>
+
+            <div class="cover"></div>
+        </div>
+
+        <div role="footer" id="footer">
+            <div class="title">
+                The Last Prophet
+            </div>
+            <div class="social">
+                <a class="twitter" href="https://twitter.com/lastprophet" title="The Last Prophet - Twitter" target="_blank"><span></span></a>
+                <a class="facebook" href="https://www.facebook.com/the.last.prophet.book" title="The Last Prophet - Facebook" target="_blank"><span></span></a>
+            </div>
+            <div class="links">
+                <a href="http://dont-judge-a-dick-by-its-foreskin.com/the-author" target="_blank">The Author</a>
+                <a href="http://dont-judge-a-dick-by-its-foreskin.com/blog" target="_blank">Blog</a>
+            </div>
+            <div class="drawer-control" onClick="toggleClass();">
+            </div>
+        </div>
+
+        <object id="player">
+            <param name="autostart" value="true">
+            <param name="src" value="NineInchNails-IWouldForYou.mp3">
+            <param name="autoplay" value="true">
+            <param name="controller" value="true">
+            <param name="loop" value="true">
+            <embed src="NineInchNails-IWouldForYou.mp3" controller="true" autoplay="true" autostart="True" type="audio/mp3" loop="true" />
+        </object>
+
+        <script type="text/javascript">
+            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+        </script>
+        <script type="text/javascript">
+            try{
+            var pageTracker = _gat._getTracker("UA-42201274-1");
+            pageTracker._trackPageview();
+            } catch(err) {}
+        </script>
+        <script type="text/javascript">
+            function toggleClass() {
+                var el = document.getElementById('footer');
+                if (el.className == '') {
+                    el.className = 'open';
+                    window.scrollTo(0,8000);
+                    return;
+                }
+
+                el.className = '';
+            }
+        </script>
+    </body>
+</html>
