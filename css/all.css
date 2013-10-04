@@ -1054,7 +1054,7 @@ div[role="footer"] {
 /* iPad General */
 @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
     #bg-page .placeholder {
-        background: url(../img/background_lo.png) top center;
+        background: url(../img/background_hi.png) center center;
     }
        .cover {
             width: 300px;
@@ -1145,15 +1145,13 @@ div[role="footer"] {
             display: none;
         }
         .cover {
-            position: relative;
-            width: 225px;
-            height: 225px;
-            background-image: url(../img/cover_225.png);
+            display: none;
         }   
     div[role="footer"] {
-        position: relative;
+        position: absolute;
         z-index: 100;
         left: 0px;
+        bottom: 0px;
         width: 100%;
         background: url(../img/bg_box.png);
     }
@@ -1179,6 +1177,10 @@ div[role="footer"] {
 
 /* iPhone Portait */
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) and (orientation : portrait) {
+    html, body {
+        background: fixed url(../img/background_lo.png) -250px -200px;
+        width: 100%;
+    }
     div[role="main"].content-container {
         left: 25px;
         width: 240px;
