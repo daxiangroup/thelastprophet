@@ -1120,10 +1120,6 @@ div[role="footer"] {
         transition-property: all;
         transition-duration: .4s;
     }
-    html, body {
-        background: fixed url(../img/background_lo.png) center center;
-        width: 100%;
-    }
     #bg-page {
         display: none;
     }
@@ -1178,16 +1174,20 @@ div[role="footer"] {
 /* iPhone Portait */
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) and (orientation : portrait) {
     html, body {
-        background: fixed url(../img/background_lo.png) -250px -200px;
+        background: fixed url(../img/background_lo.png) -250px -180px;
         width: 100%;
     }
     div[role="main"].content-container {
-        left: 25px;
+        left: 35px;
         width: 240px;
+        padding: 4px;
     }
         .content-container h1 {
-            font-size: 1.8em;
-            margin-top: 5px;
+            font-size: 1.4em;
+            margin-top: 0px;
+        }
+        .content-container .links {
+            margin: 0 auto;
         }
             .content-container a {
                 width: 100px;
@@ -1232,13 +1232,52 @@ div[role="footer"] {
 
 /* iPhone Landscape */
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) and (orientation : landscape) {
-    div[role="main"].content-container {
-        left: 25px;
-        width: 240px;
+    html, body {
+        background: fixed url(../img/background_lo_phone.png) -250px -220px;
+        width: 100%;
     }
+    div[role="main"].content-container {
+        left: 37px;
+        width: 240px;
+        padding: 4px;
+    }
+        .content-container h1 {
+            font-size: 1.2em;
+            margin: 0 auto 4px auto;
+        }
+        .content-container .links {
+            width: 215px;
+            margin: 0 auto;
+        }
         .content-container a {
             width: 100px;
+            font-size: 10px;
+            padding: 0px;
         }
+/*
+        .content-container a {
+            position: relative;
+            color: #222;
+            text-decoration: none;
+            background-color: rgba(219,87,5,1);
+            background-color: #aaaaaa;
+            font-weight: 400;
+            font-size: 14px;
+            display: block;
+            -webkit-border-radius: 8px;
+            -moz-border-radius: 8px;
+            border-radius: 8px;
+            border-bottom: solid 1px #ddd;
+            -webkit-box-shadow: 0px 6px 0px #333, 0px 6px 25px rgba(0,0,0,.7);
+            -moz-box-shadow: 0px 6px 0px #333, 0px 6px 25px rgba(0,0,0,.7);
+            box-shadow: 0px 6px 0px #333, 0px 6px 25px rgba(0,0,0,.7);
+            padding: 4px;
+            margin: 0px auto;
+            width: 140px;
+        }
+*/
+
+
 
     div[role="footer"] {
         height: 35px;
