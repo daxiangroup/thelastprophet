@@ -13,7 +13,7 @@ $books = array(
     'ar' => 'TheLastProphet-Arabic.pdf',
 );
 
-$fp = fopen('/clicks/tracking.txt', 'a');
+$fp = fopen('clicks/tracking.txt', 'a');
 fwrite($fp, '['.date('Y-m-d H:i:s').'] '.$_SERVER['REMOTE_ADDR'].' : '.($lang == 'en' ? 'English' : 'Arabic'));
 fclose($fp);
 
