@@ -14,7 +14,7 @@ $books = array(
 );
 
 $fp = fopen('clicks/tracking.txt', 'a');
-fwrite($fp, '['.date('Y-m-d H:i:s').'] '.$_SERVER['REMOTE_ADDR'].' : '.($lang == 'en' ? 'English' : 'Arabic').PHP_EOL);
+fwrite($fp, '['.date('Y-m-d H:i:s').'] '.$_SERVER['HTTP_X_FORWARDED_FOR'].' : '.($lang == 'en' ? 'English' : 'Arabic').PHP_EOL);
 fclose($fp);
 
 header('Content-Transfer-Encoding: binary');  // For Gecko browsers mainly
