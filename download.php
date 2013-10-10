@@ -13,6 +13,10 @@ $books = array(
     'ar' => 'TheLastProphet-Arabic.pdf',
 );
 
+$fp = fopen('/clicks/tracking.txt', 'a');
+fwrite($fp, '['.date('Y-m-d H:i:s').'] '.$_SERVER['REMOTE_ADDR'].' : '.($lang == 'en' ? 'English' : 'Arabic'));
+fclose($fp);
+
 header('Content-Transfer-Encoding: binary');  // For Gecko browsers mainly
 header('Last-Modified: ' . gmdate('D, d M Y H:i:s', filemtime($books[$lang])) . ' GMT');
 header('Accept-Ranges: bytes');  // For download resume
