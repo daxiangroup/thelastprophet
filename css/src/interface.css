@@ -5,6 +5,7 @@ html, body {
     padding: 0;
     margin: 0;
     width: 100%;
+    height: 100vh;
     text-transform: uppercase;
     letter-spacing: 1px;
     word-spacing: 1px;
@@ -19,7 +20,7 @@ html, body {
     height:100%;
 }
     #bg-page .placeholder {
-        background: url(../img/background_hi.png) top center;
+        background: url(../../img/background_hi.png) top center;
         top:0;
         bottom:0;
         left:0;
@@ -38,7 +39,7 @@ div[role="main"] {
         position: absolute;
         bottom: 75px;
         right: 15px;
-        background: url(../img/bg_box.png);
+        background: url(../../img/bg_box.png);
         padding: 15px;
         color: #999;
         height: auto;
@@ -98,7 +99,7 @@ div[role="main"] {
             .content-container a span {
                 position: absolute;
                 display: block;
-                background: url(../img/shine.png) -60px -80px no-repeat;
+                background: url(../../img/shine.png) -60px -80px no-repeat;
                 -webkit-border-radius: 8px;
                 -moz-border-radius: 8px;
                 border-radius: 8px;
@@ -126,7 +127,7 @@ div[role="main"] {
             width: 300px;
             height: 300px;
             border: solid 1px #202020;
-            background-image: url(../img/cover_300.png);
+            background-image: url(../../img/cover_300.png);
             margin: 0 auto;
         }
 
@@ -137,7 +138,7 @@ div[role="footer"] {
     bottom: 0px;
     width: 100%;
     height: 75px;
-    background: url(../img/bg_box.png);
+    background: url(../../img/bg_box.png);
 }
     div[role="footer"] .title {
         position: absolute;
@@ -163,7 +164,7 @@ div[role="footer"] {
             .social a span {
                 position: relative;
                 display: block;
-                background: url(../img/shine.png) -60px -80px no-repeat;
+                background: url(../../img/shine.png) -60px -80px no-repeat;
                 transition-property: all;
                 transition-duration: .8s;
                 height: 40px;
@@ -176,10 +177,10 @@ div[role="footer"] {
                 }
 
         .social .twitter {
-            background-image: url(../img/twitter.png);
+            background-image: url(../../img/twitter.png);
         }
         .social .facebook {
-            background-image: url(../img/facebook.png);
+            background-image: url(../../img/facebook.png);
         }
 
     div[role="footer"] .links {
@@ -216,16 +217,16 @@ div[role="footer"] {
 /* iPad General */
 @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
     #bg-page .placeholder {
-        background: url(../img/background_hi.png) center center;
+        background: url(../../img/background_hi.png) center center;
     }
        .cover {
             width: 300px;
             height: 300px;
-            background-image: url(../img/cover_300.png);
+            background-image: url(../../img/cover_300.png);
         }
     #player {
         display: none;
-    }    
+    }
 }
 
 /* iPad Portait */
@@ -269,10 +270,10 @@ div[role="footer"] {
                 height: 32px;
             }
             .social .twitter {
-                background-image: url(../img/twitter_32.png);
+                background-image: url(../../img/twitter_32.png);
             }
             .social .facebook {
-                background-image: url(../img/facebook_32.png);
+                background-image: url(../../img/facebook_32.png);
             }
 }
 
@@ -304,14 +305,14 @@ div[role="footer"] {
         }
         .cover {
             display: none;
-        }   
+        }
     div[role="footer"] {
         position: absolute;
         z-index: 100;
         left: 0px;
         bottom: 0px;
         width: 100%;
-        background: url(../img/bg_box.png);
+        background: url(../../img/bg_box.png);
     }
         div[role="footer"] .links, div[role="footer"] .social {
             display: none;
@@ -326,7 +327,7 @@ div[role="footer"] {
             right: 15px;
             width: 30px;
             height: 25px;
-            background: url(../img/255.png);
+            background: url(../../img/255.png);
         }
     #player {
         display: none;
@@ -336,13 +337,14 @@ div[role="footer"] {
 /* iPhone Portait */
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) and (orientation : portrait) {
     html, body {
-        background: fixed url(../img/background_lo.png) -250px -180px;
+        background: fixed url(../../img/background_lo.png) center bottom; /* -250px -180px;*/
         width: 100%;
     }
     div[role="main"].content-container {
-        left: 35px;
+        right: 0;
         width: 240px;
         padding: 4px;
+        margin: 0 auto 10px auto;
     }
         .content-container h1 {
             font-size: 1.4em;
@@ -368,7 +370,7 @@ div[role="footer"] {
 
         div[role="footer"].open {
             height: 100px;
-        }        
+        }
             div[role="footer"].open .social {
                 top: 45px;
                 left: 10px;
@@ -395,7 +397,7 @@ div[role="footer"] {
 /* iPhone Landscape */
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) and (orientation : landscape) {
     html, body {
-        background: fixed url(../img/background_lo_phone.png) -250px -220px;
+        background: fixed url(../../img/background_lo_phone.png) -250px -220px;
         width: 100%;
     }
     div[role="main"].content-container {
@@ -453,7 +455,7 @@ div[role="footer"] {
 
     div[role="footer"].open {
         height: 85px;
-    }        
+    }
         div[role="footer"].open .social {
             top: 37px;
             left: 10px;
@@ -476,15 +478,15 @@ div[role="footer"] {
             height: 32px;
         }
         .social .twitter {
-            background-image: url(../img/twitter_32.png);
+            background-image: url(../../img/twitter_32.png);
         }
         .social .facebook {
-            background-image: url(../img/facebook_32.png);
+            background-image: url(../../img/facebook_32.png);
         }
     div[role="footer"] .drawer-control {
         width: 22px;
         height: 19px;
         top: 8px;
-        background: url(../img/255_sm.png);
+        background: url(../../img/255_sm.png);
     }
 }
